@@ -2,7 +2,7 @@
  * Created by ok on 2017/8/7.
  */
 import jsonp from 'common/js/jsonp'
-import {commonParams, options} from './config'
+import {commonParams, options, options1} from './config'
 import axios from 'axios'
 export function getRecommend() {
   const url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
@@ -47,8 +47,7 @@ export function getSongList(disstid) {
     onlysong: 0,
     platform: 'yqq',
     hostUin: 0,
-    needNewCode: 0,
-    g_tk: 67232076
+    needNewCode: 0
   })
-  return jsonp(url, data, options)
+  return jsonp(url, data, options1)
 }
